@@ -16,7 +16,7 @@ const App = () => {
       {/* Background */}
       <div className="flex justify-center items-center h-screen bg-contain">
         {/* Container */}
-        <div className="flex flex-1 rounded-md bg-white min-w-[50%] max-w-[70%] h-[800px] border-2 border-rose-600">
+        <div className="flex flex-1 rounded-md bg-white min-w-[50%] max-w-[70%] h-[80%] border-[5px]  border-dashed border-black">
           <Sidebar handleSelectPokemon={handleSelectPokemon} />
           <Detail number={currentPokemon} />
         </div>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import SearchParams from "./SearchParams";
-import NameFormatting from "../Utils/NameFormatting.js";
+import NameFormatting from "../Utils/nameFormatting.js";
 
 const Sidebar = (props) => {
   const [loading, setLoading] = useState(true);
@@ -29,8 +29,9 @@ const Sidebar = (props) => {
       <div className="flex-1 bg-red-600 rounded-tl-md">
         <SearchParams />
       </div>
+
       {/* Pokemons List */}
-      <div className="flex-[3_3_0] bg-white rounded-bl-md overflow-auto">
+      <div className="flex-[3_3_0] bg-white rounded-bl-md overflow-auto text-[1vw] pl-[3px]">
         {loading ? (
           "Loading ... "
         ) : (
