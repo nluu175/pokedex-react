@@ -11,7 +11,7 @@ const Sidebar = (props) => {
   useEffect(() => {
     // There are 898 pokemons
     axios
-      .get("https://pokeapi.co/api/v2/pokemon?limit= 898&offset=0")
+      .get("https://pokeapi.co/api/v2/pokemon?limit=898&offset=0")
       .then((response) => {
         const newList = response.data.results.map((pokemon, index) => ({
           name: pokemon.name,
@@ -22,7 +22,7 @@ const Sidebar = (props) => {
   }, []);
 
   return (
-    <div className="flex flex-col justify-start flex-[2_2_80px]">
+    <div className="flex flex-col justify-start flex-[2_2_auto] w-[80px] ">
       {/* Search Params */}
       <div className="flex-1 bg-red-600 rounded-tl-md">
         <SearchParams />

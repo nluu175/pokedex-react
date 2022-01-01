@@ -2,7 +2,7 @@
 
 ## Introduction
 
-A pokedex I make in time free time using ReactJS and TailwindCSS
+A pokedex I make in time my free time using ReactJS and TailwindCSS
 
 ## API
 
