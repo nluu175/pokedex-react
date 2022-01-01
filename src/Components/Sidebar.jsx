@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import SearchParams from "./SearchParams";
+import NameFormatting from "../Utils/NameFormatting.js";
 
 const Sidebar = (props) => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [pokelist, setPokeList] = useState([]);
 
   const { handleSelectPokemon } = props;
@@ -19,28 +20,33 @@ const Sidebar = (props) => {
         }));
         setPokeList(newList);
       });
+    setLoading(false);
   }, []);
 
   return (
-    <div className="flex flex-col justify-start flex-[2_2_auto] w-[80px] ">
+    <div className="flex flex-col justify-start flex-[2_2_0] w-[80px] ">
       {/* Search Params */}
       <div className="flex-1 bg-red-600 rounded-tl-md">
         <SearchParams />
       </div>
       {/* Pokemons List */}
       <div className="flex-[3_3_0] bg-white rounded-bl-md overflow-auto">
-        <ul>
-          {pokelist.map((pokemon) => (
-            <li key={pokemon.no}>
-              <button
-                onClick={(e) => handleSelectPokemon(e)}
-                value={pokemon.no}
-              >
-                # {pokemon.no} - {pokemon.name}{" "}
-              </button>
-            </li>
-          ))}
-        </ul>
+        {loading ? (
+          "Loading ... "
+        ) : (
+          <ul>
+            {pokelist.map((pokemon) => (
+              <li key={pokemon.no}>
+                <button
+                  onClick={(e) => handleSelectPokemon(e)}
+                  value={pokemon.no}
+                >
+                  {pokemon.no} - {NameFormatting(pokemon.name)}{" "}
+                </button>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
     </div>
   );

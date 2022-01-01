@@ -1,5 +1,11 @@
 const SearchParams = () => {
-  return <div>SearchParams</div>;
+  return (
+    <div>
+      SearchParams
+      <p>Name</p>
+      <p>Filter By</p>
+    </div>
+  );
 };
 
 export default SearchParams;
