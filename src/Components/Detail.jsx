@@ -72,13 +72,13 @@ const Detail = (props) => {
   }
 
   return (
-    <div className="flex-[5_5_0] bg-blue-200 rounded-tr-md rounded-br-md text-auto flex flex-col justify-start items-center">
+    <div className="flex-[5_5_0] bg-blue-200 rounded-tr-md rounded-br-md text-auto flex flex-col justify-start items-center gap-1 overflow-auto">
       {/* Name */}
       <div className="flex-none">
         <h1>{NameFormatting(pokemon.name)}</h1>
       </div>
       {/* Image */}
-      <div className="w-[300px] h-[300px] border-4 m-auto bg-zinc-100 flex-none">
+      <div className="w-[300px] h-[300px] border-4 m-1 bg-zinc-100 flex-none">
         <img
           src={
             photoURL ||
@@ -89,7 +89,7 @@ const Detail = (props) => {
         />
       </div>
       {/* Info */}
-      <div className="flex-auto">
+      <div className="flex-auto text-[2vh]">
         {/* Natural Stat */}
         <div className="flex-1">
           <p>Weight: {convertWeight(pokemon.weight)} kg</p>
@@ -98,12 +98,13 @@ const Detail = (props) => {
         </div>
         {/* Type */}
         <div className="flex-1">
-          <h2>Type</h2>
+          <h2>Type: </h2>
           {formatTypes()}
         </div>
         {/* Weaknesses */}
         <div className="flex-1">
-          <h2>Weaknesses</h2>
+          <h2>Weaknesses: </h2>
+          <p>[ to be added ... ]</p>
         </div>
       </div>
     </div>

@@ -12,9 +12,9 @@ const App = () => {
 
   return (
     <div>
-      <h1>Pokedex</h1>
       {/* Background */}
-      <div className="flex justify-center items-center h-screen bg-contain">
+      <h1 className="text-center text-lg bg-blue-100">Pokedex</h1>
+      <div className="flex justify-center items-center h-screen bg-contain bg-blue-100">
         {/* Container */}
         <div className="flex flex-1 rounded-md bg-white min-w-[50%] max-w-[70%] h-[80%] border-[5px]  border-dashed border-black">
           <Sidebar handleSelectPokemon={handleSelectPokemon} />

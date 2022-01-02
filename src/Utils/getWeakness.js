@@ -117,6 +117,8 @@ const typesList = [
   },
 ];
 
-const getWeakness = () => {};
+const getWeakness = (typesArray) => {
+  typesArray.forEach((type) => {});
+};
 
 export default getWeakness;

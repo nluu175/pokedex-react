@@ -1,9 +1,8 @@
 const SearchParams = () => {
   return (
     <div>
-      SearchParams
-      <p>Name</p>
-      <p>Filter By</p>
+      SearchParams <br />
+      [To be added ...]
     </div>
   );
 };
