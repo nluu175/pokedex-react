@@ -72,7 +72,7 @@ const Detail = (props) => {
   }
 
   return (
-    <div className="flex-[5_5_0] bg-blue-200 rounded-tr-md rounded-br-md text-auto flex flex-col justify-start items-center gap-1 overflow-auto">
+    <div className="flex-[5_5_0] bg-blue-200 rounded-tr-md rounded-br-md text-auto flex flex-col justify-start items-center gap-1 overflow-auto ">
       {/* Name */}
       <div className="flex-none">
         <h1>{NameFormatting(pokemon.name)}</h1>
